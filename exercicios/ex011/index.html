@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em Html5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse sute em vários dispositivos diferentes</p>
+
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexivel">
+    </picture>
+    <h1>Reproduzindo audios</h1>
+    <audio src="midia/Lecrae -Cry-For You -(Lyrics-Sub)-ft-Taylor-Hill.mp4" controls ></audio>
+    <h2>Formatos de audio nos sites</h2>
+    <p>
+        <ol>
+             <li>MP3</li>
+             <li>WAV</li>
+             <li>OGG</li>
+        </ol>
+    </p>
+    <h2>outra forma de adicionar audio </h2>
+    <audio preload="metadata" controls loop >
+        <source src="midia/Lecrae -Cry-For You -(Lyrics-Sub)-ft-Taylor-Hill.mp4" type="audio/mpeg">
+        <source src="midia/omar.ogg" type="audio/ogg">
+        <source src="midia/omar.wav" type="audio/wav"> 
+    </audio>
+    <p>Infelizmente seu navegador não consegui reproduzir Audio para baixar o arquivo  Mp3 <a href="midia/Lecrae -Cry-For You -(Lyrics-Sub)-ft-Taylor-Hill.mp4"> clique aqui  </a></p>
+
+
+</body>
+</html>
