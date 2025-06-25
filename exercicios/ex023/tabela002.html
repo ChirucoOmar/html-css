@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+         body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            margin: auto;
+            position: relative;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+        td.num{
+            text-align: right;
+        }
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
+        tbody > tr:nth-child(2n-1){
+            background-color: rgba(211, 211, 211, 0.233);
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--Anatomia para tabelas grandes
+    TABLE 
+        caption
+        THEAD
+            TR, TD, TH
+        TBODY
+            TR, TD, TH
+        TFOOT
+            TR, TD, TH
+    -->
+    <table>
+        <caption>População das unidades federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">posicao</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td>
+                <td class="num">45 919 045 </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td class="num">21  168 791</td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bahia</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rio Grande Sul</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Pernanbuco</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Ceará</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Pará</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Santa Catarina</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Maranhão</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Goias</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Amazonas</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Espirito Santo </td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Paraibas</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Rio grande do norte</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Mato Grosso</td>
+                <td class="num">17  264 943</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Alagoas</td>
+                <td class="num">3 127 683</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Piaui</td>
+                <td class="num">3 271 199</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Distrito Federal</td>
+                <td class="num">2 817 381</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 757 013</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>Sergipe</td>
+                <td class="num">2 289 696</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Rondônia</td>
+                <td class="num">237 576,2</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>Tocantins</td>
+                <td class="num">1.572.866</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Acre</td>
+                <td class="num">881.935</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>Amapá</td>
+                <td class="num">845.731</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>Roraima</td>
+                <td class="num">605 761</td>
+            </tr>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                
+                <th scope="row">Total de Habitantes </th>
+                <td></td>
+                <td class="num"><strong>00000</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus ullam corrupti doloribus magni debitis aliquam delectus illo veniam nulla tempore saepe, a, consequatur cum. Sed maiores dignissimos itaque accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi ducimus voluptatem voluptates, voluptate non consectetur iusto! Ipsum, commodi necessitatibus ab odio cupiditate consectetur eum optio consequatur exercitationem iusto expedita! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio error neque sequi porro, deserunt corrupti quidem maiores amet debitis ex ipsum dignissimos aliquam quisquam, ratione vel quas aperiam totam at! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat ut debitis! Nam quia ab quos, aspernatur dignissimos eveniet ducimus ipsum? Perspiciatis quod, eius accusamus nobis placeat necessitatibus dignissimos inventore?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus ullam corrupti doloribus magni debitis aliquam delectus illo veniam nulla tempore saepe, a, consequatur cum. Sed maiores dignissimos itaque accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi ducimus voluptatem voluptates, voluptate non consectetur iusto! Ipsum, commodi necessitatibus ab odio cupiditate consectetur eum optio consequatur exercitationem iusto expedita! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio error neque sequi porro, deserunt corrupti quidem maiores amet debitis ex ipsum dignissimos aliquam quisquam, ratione vel quas aperiam totam at! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat ut debitis! Nam quia ab quos, aspernatur dignissimos eveniet ducimus ipsum? Perspiciatis quod, eius accusamus nobis placeat necessitatibus dignissimos inventore?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus ullam corrupti doloribus magni debitis aliquam delectus illo veniam nulla tempore saepe, a, consequatur cum. Sed maiores dignissimos itaque accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi ducimus voluptatem voluptates, voluptate non consectetur iusto! Ipsum, commodi necessitatibus ab odio cupiditate consectetur eum optio consequatur exercitationem iusto expedita! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio error neque sequi porro, deserunt corrupti quidem maiores amet debitis ex ipsum dignissimos aliquam quisquam, ratione vel quas aperiam totam at! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat ut debitis! Nam quia ab quos, aspernatur dignissimos eveniet ducimus ipsum? Perspiciatis quod, eius accusamus nobis placeat necessitatibus dignissimos inventore?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus ullam corrupti doloribus magni debitis aliquam delectus illo veniam nulla tempore saepe, a, consequatur cum. Sed maiores dignissimos itaque accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi ducimus voluptatem voluptates, voluptate non consectetur iusto! Ipsum, commodi necessitatibus ab odio cupiditate consectetur eum optio consequatur exercitationem iusto expedita! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio error neque sequi porro, deserunt corrupti quidem maiores amet debitis ex ipsum dignissimos aliquam quisquam, ratione vel quas aperiam totam at! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat ut debitis! Nam quia ab quos, aspernatur dignissimos eveniet ducimus ipsum? Perspiciatis quod, eius accusamus nobis placeat necessitatibus dignissimos inventore?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus ullam corrupti doloribus magni debitis aliquam delectus illo veniam nulla tempore saepe, a, consequatur cum. Sed maiores dignissimos itaque accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi ducimus voluptatem voluptates, voluptate non consectetur iusto! Ipsum, commodi necessitatibus ab odio cupiditate consectetur eum optio consequatur exercitationem iusto expedita! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio error neque sequi porro, deserunt corrupti quidem maiores amet debitis ex ipsum dignissimos aliquam quisquam, ratione vel quas aperiam totam at! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat ut debitis! Nam quia ab quos, aspernatur dignissimos eveniet ducimus ipsum? Perspiciatis quod, eius accusamus nobis placeat necessitatibus dignissimos inventore?</p>
+</body>
+</html>
