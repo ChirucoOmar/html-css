@@ -257,6 +257,15 @@ footer .container .footer-primary-heading{
         font-size: 3rem;
         margin: 2rem;
     }
+    .primary-headings{
+        width: 400px;
+
+    }
+    .customer .customer-img .img{
+        width: 150px;
+        height: 150px;
+        
+    }
 } 
     
 
