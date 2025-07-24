@@ -1,22 +1,39 @@
 const generateBtn = document.getElementById("generate-btn")
 const paletteContainer = document.querySelector(".palette-container")
 
+
 generateBtn.addEventListener("click", generatePalette)
+
 paletteContainer.addEventListener("click", function(e) { 
     if(e.target.classList.contains("copy-btn")){
         const hexValue = e.target.previousElementSibling.textContent;
 
 
-        navigator.clipboard.writeText(hexValue).then(()=> showCopySuccess())
-        .catch((err)=> console.log(err))
+        navigator.clipboard
+            .writeText(hexValue)
+            .then(()=> showCopySuccess(e.target))
+            .catch((err) => console.log(err))
+    } else if(e.target.classList.contains("color")){
+        const hexValue = e.target.nextElementSibling.querySelector(".hex-value").textContent;
+
+        navigator.clipboard
+            .writeText(hexValue)
+            .then(()=> showCopySuccess(e.target.nextElementSibling.querySelector(".copy-btn")))
+            .catch((err) => console.log(err))
     }
 
 });
-function showCopySuccess(){
-    copyBtn.classList.remove("far", "fa-copy");
-    copyBtn.classList.add("fas", "fa-check");
+function showCopySuccess(element){
+    element.classList.remove("fa", "fa-copy");
+    element.classList.add("fa", "fa-check");
 
-    copyBtn.style.color = "#48bb78";
+    element.style.color = "#48bb78";
+
+    setTimeout(() => {
+        element.classList.remove("fa", "fa-check");
+        element.classList.add("fa", "fa-copy");
+        element.style.color = "";
+    },1500)
 }
 
 function generatePalette(){
@@ -34,7 +51,7 @@ function generateRandomColor(){
     let color = "#"
 
     for(let i =0 ; i<6; i++){
-        color+= letters[Math.floor(Math.random() * 16)]
+        color += letters[Math.floor(Math.random() * 16)]
     }
     return color
 }
