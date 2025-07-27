@@ -16,6 +16,15 @@ const progressBar = document.getElementById("progress");
 
 const quizQuestions = [
   {
+    question: "Quantos livros tem a Biblia?",
+    answers: [
+      { text: "39", correct: false },
+      { text: "69", correct: false },
+      { text: "66", correct: true },
+      { text: "27", correct: false },
+    ],
+  },
+  {
     question: "What is the capital of France?",
     answers: [
       { text: "London", correct: false },
